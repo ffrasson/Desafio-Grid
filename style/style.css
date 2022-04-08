@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200&family=Orbitron:wght@900&display=swap');
+
+/* Generales*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --theme-color: whitesmoke;
+    --primary-color: cornflowerblue;
+    --secundary-color: rgb(0,184,191);
+    --text-color-inverse: white;
+    --text-color: black;
+    --menu-mobile-background-color: rgb(53,99,139);
+    --color-gradient:linear-gradient(90deg, rgba(53,99,139,1) 0%, rgba(0,184,191,1) 35%, rgba(0,212,255,1) 100%);
+    --navbar-shadow-color: grey;
+    --color-alt1: rgb(53,99,139);
+    --color-alt2: rgb(99,142,240);
+    --color-green: rgb(0,255,126);
+}
+
+
+html{
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.6rem;
+    min-height: 100%;
+  
+}
+
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border: 4px;
+    padding: 10px;
+    text-align: center;
+}       
+
+.header{
+    grid-area: header;
+    background-color: cornflowerblue;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+}
+
+span{
+    color: var(--color-green)
+}
+
+.rrss{
+    grid-area: rrss;
+    background-color: lightseagreen;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: lightsalmon;
+}
+
+.main{
+    grid-area: main;
+    background-color: whitesmoke;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: lightcyan;
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template: 
+    "header" 60px
+    "rrss"   40px
+    "sidebar" 40px
+    "main" auto
+    "footer" 60px;
+}
+
+ /*NAVBAR*/
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.logo{
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 1.8rem;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link{
+    padding:8px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active{
+    transition: 0.5s;
+    background: rgb(53,99,139);
+    background: linear-gradient(90deg, rgba(53,99,139,1) 0%, rgba(0,184,191,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.nav-toggle{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+
+}
+
+/* RRSS */
+
+.rrss-menu{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+    line-height: 40px;
+}
+
+.rrss-menu-item{
+    background-color: inherit;
+   
+}
+
+.rrss-menu-link{
+    font-size: 3.5rem;
+    color: #737373;
+    text-align: center;
+}
+
+.icon-whatsapp{
+    color: var(--color-green);
+}
+
+/* DISEÑO PARA CELULAR*/
+
+@media screen and (max-width: 600px){
+    .body{
+        padding-top: 70px;
+    }
+    
+    .header{
+        height: 60px;
+    }
+
+    .logo{
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+
+    .nav-menu{
+        flex-direction: column;
+        align-items: center;
+        margin-right: 40px;
+        list-style: none;
+        background-color: grey;
+        position: fixed;
+        left:0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left:100%;
+        transition: left 0.3s;
+    }
+    
+    .nav-menu-item{
+        line-height: 70px;
+    }
+    
+    .nav-menu-link:hover,
+    .nav-menu-link_active{
+        transition: 0.5s;
+        background: none;
+        color: rgb(53,99,139);
+        color: linear-gradient(90deg, rgba(53,99,139,1) 0%, rgba(0,184,191,1) 35%, rgba(0,212,255,1) 100%);
+    }
+
+    .nav-toggle{
+        display: block;
+    }
+
+    .nav-menu_visible{
+        left: 0;
+    }
+
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
+    }
+}
+
+
+@media (min-width: 600px){
+    .grid-container{
+        /* grid-template-columns: 200px auto;
+        grid-template-rows: 100px 50px auto 100px;
+        grid-template-areas: 
+        "header  header"
+        "navbar  navbar"
+        "sidebar main"
+        "footer  footer";*/
+        grid-template:
+        "header  header" 80px
+        "rrss    rrss"   60px
+        "sidebar  main"   auto
+        "footer  footer" 80px /
+        150px    auto;
+    }
+}
+
+/* Diseño para Desktop */
+
+@media (min-width: 900px){
+    .grid-container{
+        /* grid-template-columns: 200px auto;
+        grid-template-rows: 100px 50px auto 100px;
+        grid-template-areas: 
+        "header  header"
+        "navbar  navbar"
+        "sidebar main"
+        "footer  footer";*/
+        grid-template:
+        "header  header  header" 80px
+        "sidebar    main    rrss" auto
+        "footer  footer  footer" 80px /
+        250px    auto    50px;
+    }
+}
