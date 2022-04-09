@@ -4,89 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/estilo.css">
+    <link rel="stylesheet" href="../style/pages.css">
     <link rel="stylesheet" href="../style/normalize.css">
-    <link rel="shortcut icon" href="./media/imagenes/favicon.ico">
+    <link rel="shortcut icon" href="../media/imagenes/favicon.ico">
     <script src="https://kit.fontawesome.com/b7a5260f49.js" crossorigin="anonymous"></script>
+    <script defer src="../index.js"></script>
     <title>Nomade</title>
 </head>
 
-<body>
+<body class="grid-container">
+    <header class="header">
+        <nav class="nav">
+            <a href="./index.html" class="logo nav-link">
+                <img src="../media/imagenes/logo-SurferTI.png"alt="SurfersTI">
+                <h1>
+                    <span>Surfers</span>TI
+                </h1>
+            </a>
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu nav-menu_visible">
+                <li class="nav-menu-item"><a href="../index.html" class="nav-menu-link nav-link">Inicio</a></li>
+                <li class="nav-menu-item"><a href="./servicios.html" class="nav-menu-link nav-link">Servicios</a></li>
+                <li class="nav-menu-item"><a href="./consejos.html" class="nav-menu-link nav-link">Consejos</a></li>
+                <li class="nav-menu-item"><a href="./noticias.html" class="nav-menu-link nav-link">Noticias</a></li>
+                <li class="nav-menu-item"><a href="./contacto.html" class="nav-menu-link nav-link nav-menu-link_active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- Header -->
+    <section class="rrss">
+        <ul class="rrss-menu">
+            <li class="rrss-menu-item"><a href="https://youtube.com" target="_blank" class="rrss-menu-link icon-youtube"><i class="fa-brands fa-youtube-square"></i></a></li> 
+            <li class="rrss-menu-item"><a href="https://linkedin.com" target="_blank" class="rrss-menu-link icon-linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li class="rrss-menu-item"><a href="https://facebook.com" target="_blank" class="rrss-menu-link icon-facebook"><i class="fa-brands fa-facebook-square"></i></a></li>
+            <li class="rrss-menu-item"><a href="https://instagram.com" target="_blank" class="rrss-menu-link icon-instagram"><i class="fa-brands fa-instagram-square"></i></a></li>
+            <li class="rrss-menu-item"><a href="https://twitter.com" target="_blank" class="rrss-menu-link icon-twitter"><i class="fa-brands fa-twitter-square"></i></a></li>
+            <li class="rrss-menu-item"><a href="https://web.whatsapp.com" target="_blank" class="rrss-menu-link icon-whatsapp"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <a href="./contacto.html"><button class="buttonside"><i class="fa-solid fa-user"></i>   Ingresar</button></a>
+            <a href="./noticias.html"><button class="buttonside"><i class="fa-solid fa-magnifying-glass"></i>   Buscar</button></i></a>   
+        </ul>
+    </section>
+    
 
-    <section class="fondo_dominante">
-        <header class="header contenedor">
-            <section class="logo">
-                <img id="top" src="../media/imagenes/SurferTI.jpeg" alt="logo de Surfer TI" width="145px">
-            </section>
-            <h1><span>Surfers</span>TI</h1>
-            <div class="rrss">
-                <ul>
-                    <li><a href="https://linkedin.com" target="_blank" class="icon-linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="https://facebook.com" target="_blank" class="icon-facebook"><i class="fa-brands fa-facebook-square"></i></a></li>
-                    <li><a href="https://instagram.com" target="_blank" class="icon-instagram"><i class="fa-brands fa-instagram-square"></i></a></li>
-                    <li><a href="https://web.whatsapp.com" target="_blank" class="icon-whatsapp"><i class="fa-brands fa-whatsapp"></i></a></li>
 
-                </ul>
-            </div> 
-            <nav>
-                <ul>
-                    <li><a href ="../index.html">Inicio</a></li>
-                    <li><a href="./nomade.html" target="_blank">Nómade</a></li>
-                    <li><a href="./servicios.html">Servicios Remotos</a>
-                        <ul>
-                            <li><a href="./admProyectos.html" target="_blank"> Administración de Proyectos</a></li>
-                            <li><a href="./gobiernoTi.html" target="_blank">Gobierno de TI</a></li>
-                            <li><a href="./periciasTi.html" target="_blank">Pericias Informáticas</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./consejos.html" target="_blank">Consejos</a></li>
-                    <li><a href="./Noticias.html" target="_blank">Noticias</a></li>
-                    <li><a href="./Contacto.html" target="_blank">Contacto</a></li>
-                </ul>
-            </nav>       
+<!-- MAIN CONTENIDO PRINCIPAL-->
+
+    <main class="main">
+
+    <!-- HERO -->
+
+        <class class="hero">
+            <h2>
+                <em>Experiencia Nómade Digital</em>
+            </h2>
+            <p>
+                En esta sección te contamos como sumergirte en el Universo del Nómade Digital. Surfea la Ola de la Innovación Tecnológica, postulandote a trabajos remotos, emprendiendo tu propio negocio 100% Virtual y así convertirte en un verdadero Nómade para luego contar tus propias experiencias en primera persona, viajando por todo el mundo
+            </p>
+            <a href="./nomade.html"><button class="button">Vive la Experiencia</button></a>
+        </class>
+   
+
+    <!-- CARDS -->
+
+    <section class="nomade">      
+        <ul class="nomade-menu">
+            <li class="nomade-item"><a href="#" target="_blank" class="nomade-link">Nómade Digital</a></li>
+            <li class="nomade-item"><a href="#" target="_blank" class="nomade-link">Como Ser un Nómade Digital</a></li>
+            <li class="nomade-item"><a href="#" target="_blank" class="nomade-link">Experimenta la vida Nómade Digital</a></li>
+            <li class="nomade-item"><a href="#" target="_blank" class="nomade-link">Trabajo Remoto</a></li>
+            <li class="nomade-item"><a href="#" target="_blank" class="nomade-link">Busca Trabajo Remoto</a></li>
+            <li class="nomade-item"><a href="#" target="_blank" class="nomade-link">Emprendé tu Negocio Remoto</a></li>
+        </ul>
     </section>
 
-<!-- Hero -->
-
-        <h2>
-            <em>Experiencia Nómade Digital</em>
-        </h2>
-        <button>Vive la Experiencia</button>
-
-<!-- Contenido principal-->
-
-    <main>
-        <p>En esta sección te contamos como sumergirte en el Universo del Nómade Digital. Surfea la Ola de la Innovación Tecnológica, postulandote a trabajos remotos, emprendiendo tu propio negocio 100% Virtual y así convertirte en un verdadero Nómade para luego contar tus propias experiencias en primera persona, viajando por todo el mundo</p>
+    <section class="experiencias">
+        <p>
+            Experiencias Nómade Digital               
+        </p>
         <br>
-        <section class="nomade">      
-            <ul>
-                <li><a href="#" target="_blank">Nómade Digital</a></li>
-                <li><a href="#" target="_blank">Como Ser un Nómade Digital</a></li>
-                <li><a href="#" target="_blank">Experimenta la vida Nómade Digital</a></li>
-                <br>
-                <li><a href="#" target="_blank">Trabajo Remoto</a></li>
-                <li><a href="#" target="_blank">Busca Trabajo Remoto</a></li>
-                <li><a href="#" target="_blank">Emprendé tu Negocio Remoto</a></li>
-            </ul>
-        <section class="experiencias">
-            <h3>
-                Experiencias Nómade Digital               
-            </h3>
-            <br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/LMDh9-L1F4I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </section>
- 
- <!-- footer -->
- 
-    <br>
-    <footer>
-        <hr>
-        <a href ="#top"> Ir Arriba </a> 
-        <h4>🏄🏻‍♂️ Creada por FF Design. Copyright 2022 Todos los Derechos Reservados</h4>
-        <hr>
-    </footer>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LMDh9-L1F4I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    </main>
 
+ <!--  FOOTER  -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <h4>🏄🏻‍♂️ Creada por FF Design. Copyright 2022 Todos los Derechos Reservados</h4>
+            <a href ="#top" class="top"><i class="fa-solid fa-chevron-up"></i></a> 
+        </div>
+    </footer>
 </body>
 </html>
