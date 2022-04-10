@@ -22,6 +22,9 @@
     --color-alt1: rgb(53,99,139);
     --color-alt2: rgb(99,142,240);
     --color-green: rgb(0,255,126);
+    --color-grey: grey;
+    --color-box-shadow1:rgba(0, 0, 0, 0.75);
+    --color-box-shadow2: rgba(0, 0, 0, 0.2);
   
 }
 
@@ -38,7 +41,7 @@ body{
 }
 
 .grid-container > *{
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 1px 7px 0px var(--color-box-shadow1);
     border: 4px;
     padding: 10px;
     text-align: center;
@@ -70,7 +73,7 @@ span{
     background-color: var(--theme-color);
     background: url(../media/imagenes/hero2.jpg) no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
 }
 
 .sidebar{
@@ -78,7 +81,7 @@ span{
     background-color: var(--theme-color3);
     background: url(../media/imagenes/hero1.jpg) no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
 }
 
 .footer{
@@ -262,6 +265,82 @@ span{
     background: linear-gradient(90deg, rgba(53,99,139,1) 0%, rgba(0,184,191,1) 35%, rgba(0,212,255,1) 100%);
 }
 
+/* CARDS */
+
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.card-menu {
+    height: auto;
+	display: flex;
+    justify-content: space-around;
+	max-width: 1100px;
+	margin: 5rem auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card-item {
+    border: 18px;
+    background-color: transparent;
+    box-shadow: 2px 2px 10px var(--color-box-shadow2);
+    text-align: center;
+    width: 330px;
+    border-radius: 15px;
+    font-size: 1.6rem;
+    color: var(--color-alt1);
+}
+
+.card-menu img {
+    width: 40%;
+}
+
+/* Historia */
+
+.historia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+
+.historia__textos h2 {
+    text-align: left;
+    color: var(--text-color-inverse);
+}
+
+.historia__textos p {
+    width: 100%;
+    text-align: justify;
+    color: var(--primary-color)
+}
+
+.historia img{
+    width: 80%;
+}
+
+.historia button{
+    text-decoration: none;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 15px;
+    border: 1px solid var(--color-alt1);
+    background-color: transparent;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--color-alt1);
+}
+
+.historia button:hover{
+    color: var(--theme-color);
+    border: 1px solid var(--color-green);
+    background: rgb(53,99,139);
+    background: linear-gradient(90deg, rgba(53,99,139,1) 0%, rgba(0,184,191,1) 35%, rgba(0,212,255,1) 100%);
+}
+
 /*  SIDEBAR   */
 
 .sidebar{
@@ -304,7 +383,7 @@ span{
 
 .top{
     font-size: 2rem;
-    color: #737373; 
+    color: var(gre); 
 }
 
 /* DISEÑO PARA CELULAR*/
@@ -331,7 +410,7 @@ span{
         align-items: center;
         margin-right: 40px;
         list-style: none;
-        background-color: grey;
+        background-color: var(--color-grey);
         position: fixed;
         left:0;
         top: 80px;
@@ -384,12 +463,61 @@ span{
     .hero p{
         display: none;
     }
+
+    /* CARDS */
+    
+    .card-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 300px;
+        margin: 5rem auto;
+        gap: 20px;
+        padding: 0;
+
+    }
+    
+    .card-item {
+        border: 18px;
+        background-color: transparent;
+        box-shadow: 2px 2px 10px  var(--color-box-shadow2);
+        width: 300px;
+        border-radius: 15px;
+        font-size: 1.2rem;
+        color: var(--color-alt1);
+        padding: 0;
+    }
+    
+    .card-menu img {
+        width: 50%;
+    }
+
+    /* HISTORIA */
+
+    .historia{
+        height: 150px;
+    }
+    
+    .historia__textos h2 {
+        color: var(--text-color-inverse);
+    }
+    
+    .historia__textos p {
+        color: var(--theme-color)
+    }
+    
+    .historia img{
+        width: 80%;
+    }
+    
     /*  FOOTER */
 
     .footer-container{
         display: flex;
         justify-content: flex-end;
         line-height: 20px;
+        flex-wrap: wrap;
     }
 }
 
@@ -486,6 +614,23 @@ span{
         font-size: 2rem;
     }
 
+     /* HISTORIA */
+
+    .historia{
+        height: 200px;
+    }
+    
+    .historia__textos h2 {
+        color: var(--text-color-inverse);
+    }
+    
+    .historia__textos p {
+        color: var(--theme-color)
+    }
+    
+    .historia img{
+        width: 80%;
+    }
 }
 
 /* DISEÑO PARA DESKTOP */
@@ -560,4 +705,25 @@ span{
     .hero h3{
         font-size: 2.5rem;
     }
+    .hero p{
+        font-size: 2rem;
+    }
+
+         /* HISTORIA */
+
+         .historia{
+            height: 350px;
+        }
+        
+        .historia__textos h2 {
+            color: var(--text-color-inverse);
+        }
+        
+        .historia__textos p {
+            color: var(--primary-color)
+        }
+        
+        .historia img{
+            width: 80%;
+        }
 }
