@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="./media/imagenes/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://kit.fontawesome.com/b7a5260f49.js" crossorigin="anonymous"></script>
-    <script defer src="index.js"></script>
+    <script defer src="js/index.js"></script>
     <title>SurfersTI</title>
 </head>
 
@@ -103,7 +103,7 @@
                     <figure class="card__img">
                         <img class="img" src="./media/imagenes/PericiasTI.svg" alt="Coffe card 3">
                     </figure>
-                    <div class="body">
+                    <div class="body wow">
                         <h3>Pericias Informaticas</h3>
                         <p>Informática Forense, Cadena de Custodia, Registro y Preservación de las Pruebas, Inspecciones, Informes</p>
                     </div>
@@ -114,15 +114,15 @@
         <section class="fondo__color">
             <div class="historia contenedor">
                 <div class="historia__textos">
-                    <h2>Nuestra historia</h2>
-                    <p>Somos un equipo de trabajo formado con un espiritu libre enfocado en la tencología pero en conexión con la vida y la naturaleza</p>
-                    <button class="boton">Quiero saber más</button>
+                    <h2 class="animate__animated animate__jackInTheBox">Nuestra historia</h2>
+                    <p class ="animate__animated animate__backInUp">Somos un equipo de trabajo formado con un espiritu libre enfocado en la tencología pero en conexión con la vida y la naturaleza</p>
+                    <button class="boton animate__animated animate__flash">Quiero saber más</button>
                 </div>
-                <div class="historia__img">
+                <div class="historia__img wow animate__animated animate__zoomIn">
                     <img src="./media/imagenes/historia.svg" alt="nuestra historia">
                 </div>
             </div>
-        </section>
+        </section>     
     </main>
 
  <!--  FOOTER  -->
@@ -134,5 +134,9 @@
         </div>
     </footer>
 
+    <script src ="js/wow.min.js"></script>
+    <script>
+        new WOW() .init();
+    </script>
 </body>
 </html>

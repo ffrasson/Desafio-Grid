@@ -296,6 +296,13 @@ span{
 
 .card-menu img {
     width: 40%;
+    transition: all 3s;
+    cursor: pointer;
+}
+
+.card-menu img:hover {
+   transform: scale(1.1, 1.1);
+   border-radius: 20%;
 }
 
 /* Historia */
