@@ -297,6 +297,8 @@ p{
     box-shadow: 1px 2px 3px var(--color-grey);
     background-color: var(--color-alt1);
     border-radius: 10%;
+    transition: all 3s;
+    cursor: pointer;
 }
 .nomade-link{
     text-decoration: none;
@@ -306,6 +308,7 @@ p{
     transition: 0.5s;
     background: rgb(53,99,139);
     background: linear-gradient(90deg, rgba(53,99,139,1) 0%, rgba(0,184,191,1) 35%, rgba(0,212,255,1) 100%);
+    transform: scale(1.1, 1.1);
 }
 .nomade-link:hover{
     color:rgb(254, 254, 255);
@@ -387,7 +390,6 @@ p{
 
 .servicios{
     color: var(--color-grey);
-    position: relative;
     text-align: center;
     gap: 40px;
     margin: 4rem auto;
@@ -404,15 +406,18 @@ p{
     box-shadow: 1px 2px 3px var(--color-grey);
     background-color: var(--color-alt1);
     border-radius: 5%;
+    transition: all 2s;
+    cursor: pointer;
 }
 .servicios li a{
     text-decoration: none;
     color: var(--color-green);
 }
 .servicios li:hover{
-    transition: 0.1s;
+    transition: 0.5s;
     background: rgb(53,99,139);
     background: linear-gradient(90deg, rgba(53,99,139,1) 0%, rgba(0,184,191,1) 35%, rgba(0,212,255,1) 100%);
+    transform: scale(0.9,0.9);
 }
 .servicios li a:hover{
     color:var(--theme-color);
